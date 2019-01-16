@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="list-group">
+        <li class="list-group-item active"><b>Courses list</b></li>
+        <li class="list-group-item"><a [routerLink]="['/courses', 10]">Angular basics</a></li>
+        <li class="list-group-item"><a [routerLink]="['/courses', 11]">Angular routing</a></li>
+        <li class="list-group-item"><a [routerLink]="['/courses', 12]">Angular cli</a></li>
+        <li class="list-group-item"><a [routerLink]="['/courses', 13]">Angular performance</a></li>
+        <li class="list-group-item">
+          <a [routerLink]="['/courses', 14]">Angular change detection</a>
+        </li>
+        <li class="list-group-item"><a [routerLink]="['/courses', 15]">Angular modules</a></li>
+      </ul>
+    </div>
+    <div class="col-md-9">
+      <nav class="nav">
+        <a class="nav-link active">Overview</a> <a class="nav-link" href="#">Specs</a>
+      </nav>
+      <section><router-outlet></router-outlet></section>
+    </div>
+  </div>
+</div>

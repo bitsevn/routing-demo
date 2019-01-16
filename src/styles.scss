@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+.navbar {
+  padding: 0.15rem 0.75rem;
+}
+
+.navbar-brand {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.nav-item,
+.list-group-item,
+.dropdown-item {
+  cursor: pointer;
+  padding: 0.1rem 0.5rem;
+  font-size: 12px;
+}
+
+.my-body {
+  padding: 10px;
+}

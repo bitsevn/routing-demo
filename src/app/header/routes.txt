@@ -1,0 +1,6 @@
+1. URL: /
+Components: AppComponent
+2. URL: /courses
+Components: AppComponent -> CoursesComponent
+3. URL: /courses/23
+Components: AppComponent -> CoursesComponent -> CourseDetailComponent
