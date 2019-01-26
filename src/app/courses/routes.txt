@@ -1,0 +1,27 @@
+bookmarks/:id -> BookmarkContainer
+bookmarks/:id/:mode/grid -> (View bookmark) -> BookmarkContainer
+bookmarks/:id/:mode/charts/:chartId -> (View bookmark) -> BookmarkContainer
+
+bookmarks/new
+
+bookmarks/12154
+
+Bookmark ->
+bookmarks/12154/grid/view [bookmarks/:bookmarkId/grid/view]
+bookmarks/12154/grid/edit [bookmarks/:bookmarkId/grid/edit]
+bookmarks/12154/grid/delete [bookmarks/:bookmarkId/grid/delete]
+bookmarks/new
+
+Chart ->
+bookmarks/12154/charts/142/view [bookmarks/:bookmarkId/charts/:chartId/view]
+bookmarks/12154/charts/142/edit [bookmarks/:bookmarkId/charts/:chartId/edit]
+bookmarks/12154/charts/142/delete [bookmarks/:bookmarkId/charts/:chartId/delete]
+bookmarks/12154/charts/new [bookmarks/:bookmarkId/charts/new]
+
+bookmarks/12154/view/grid
+bookmarks/12154/edit/grid
+bookmarks/12154/delete/grid
+
+bookmarks/12154/view/charts/142
+bookmarks/12154/edit/charts/142
+bookmarks/12154/delete/charts/142

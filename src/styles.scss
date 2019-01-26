@@ -26,3 +26,19 @@ body {
 .my-body {
   padding: 10px;
 }
+
+.my-item {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.my-item a {
+  flex-grow: 1;
+}
+
+.my-button {
+  height: 16px;
+  font-size: 10px;
+  line-height: 1;
+  margin-left: 4px;
+}

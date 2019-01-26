@@ -1,3 +1,43 @@
-<p>
-  lessons works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="list-group">
+        <li class="list-group-item active"><b>Lessons Actions</b></li>
+        <li class="list-group-item my-item">
+          <a [routerLink]="['/lessons', 1000]">/lessons/1000</a>
+        </li>
+        <li class="list-group-item my-item">
+          <a [routerLink]="['/lessons', 1000, 'view']">/lessons/1000/view</a>
+        </li>
+        <li class="list-group-item my-item">
+          <a [routerLink]="['/lessons', 1000, 'edit']">/lessons/1000/edit</a>
+        </li>
+        <li class="list-group-item my-item">
+          <a [routerLink]="['/lessons', 1000, 'delete']">/lessons/1000/delete</a>
+        </li>
+        <li class="list-group-item my-item"><a></a></li>
+        <li class="list-group-item my-item">
+          <a [routerLink]="['/lessons', 1000, 'charts', 124]">/lessons/1000/charts/124</a>
+        </li>
+        <li class="list-group-item my-item">
+          <a [routerLink]="['/lessons', 1000, 'charts', 124, 'view']"
+            >/lessons/1000/charts/124/view</a
+          >
+        </li>
+        <li class="list-group-item my-item">
+          <a [routerLink]="['/lessons', 1000, 'charts', 124, 'edit']"
+            >/lessons/1000/charts/124/edit</a
+          >
+        </li>
+        <li class="list-group-item my-item">
+          <a [routerLink]="['/lessons', 1000, 'charts', 124, 'delete']"
+            >/lessons/1000/charts/124/delete</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-9">
+      <section><router-outlet></router-outlet></section>
+    </div>
+  </div>
+</div>

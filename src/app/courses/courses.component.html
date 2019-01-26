@@ -3,14 +3,32 @@
     <div class="col-md-3">
       <ul class="list-group">
         <li class="list-group-item active"><b>Courses list</b></li>
-        <li class="list-group-item"><a [routerLink]="['/courses', 10]">Angular basics</a></li>
-        <li class="list-group-item"><a [routerLink]="['/courses', 11]">Angular routing</a></li>
-        <li class="list-group-item"><a [routerLink]="['/courses', 12]">Angular cli</a></li>
-        <li class="list-group-item"><a [routerLink]="['/courses', 13]">Angular performance</a></li>
-        <li class="list-group-item">
-          <a [routerLink]="['/courses', 14]">Angular change detection</a>
+        <li class="list-group-item my-item">
+          <a [routerLink]="['/courses', 10]">Angular basics</a>
+          <button class="my-button" [routerLink]="['/courses']">edit</button>
+          <button class="my-button">view</button>
         </li>
-        <li class="list-group-item"><a [routerLink]="['/courses', 15]">Angular modules</a></li>
+        <li class="list-group-item my-item">
+          <a [routerLink]="['/courses', 11]">Angular routing</a>
+          <button [routerLink]="['/courses', 11, 'overview']" class="my-button">overview</button>
+          <button class="my-button">specs</button>
+        </li>
+        <li class="list-group-item my-item">
+          <a [routerLink]="['/courses', 12]">Angular cli</a>
+          <button class="my-button">edit</button> <button class="my-button">view</button>
+        </li>
+        <li class="list-group-item my-item">
+          <a [routerLink]="['/courses', 13]">Angular performance</a>
+          <button class="my-button">edit</button> <button class="my-button">view</button>
+        </li>
+        <li class="list-group-item my-item">
+          <a [routerLink]="['/courses', 14]">Angular change detection</a>
+          <button class="my-button">edit</button> <button class="my-button">view</button>
+        </li>
+        <li class="list-group-item my-item">
+          <a [routerLink]="['/courses', 15]">Angular modules</a>
+          <button class="my-button">edit</button> <button class="my-button">view</button>
+        </li>
       </ul>
     </div>
     <div class="col-md-9">

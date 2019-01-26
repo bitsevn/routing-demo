@@ -6,6 +6,7 @@ import { CourseOverviewComponent } from './course-overview.component';
 import { CourseSpecsComponent } from './course-specs.component';
 import { CourseComponent } from './course.component';
 import { CourseGuard } from './course.guard';
+import { CourseResolver } from './course.resolver';
 import { CoursesComponent } from './courses.component';
 
 const coursesRoutes: Routes = [
@@ -13,9 +14,19 @@ const coursesRoutes: Routes = [
     path: 'courses',
     component: CoursesComponent,
     children: [
-      { path: '', component: CourseComponent },
-      { path: ':id', component: CourseOverviewComponent, canDeactivate: [CourseGuard] },
-      { path: ':id/specs', component: CourseOverviewComponent }
+      {
+        path: ':id',
+        component: CourseComponent,
+        children: [
+          {
+            path: 'overview',
+            component: CourseOverviewComponent,
+            canDeactivate: [CourseGuard],
+            resolve: { course: CourseResolver }
+          },
+          { path: 'specs', component: CourseOverviewComponent, resolve: { course: CourseResolver } }
+        ]
+      }
     ]
   }
 ];
@@ -30,6 +41,6 @@ const coursesRoutes: Routes = [
     CourseSpecsComponent
   ],
   imports: [CommonModule, FormsModule, RouterModule.forChild(coursesRoutes)],
-  providers: [CourseGuard]
+  providers: [CourseGuard, CourseResolver]
 })
 export class CoursesModule {}

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { IAppStoreState } from '../app.interface';
-import * as fromRouter from '../app.reducer';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-course-overview',
@@ -10,19 +8,12 @@ import * as fromRouter from '../app.reducer';
 })
 export class CourseOverviewComponent implements OnInit {
   courseId: number;
-
-  constructor(private store: Store<IAppStoreState>) {}
+  course: any;
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.store.select(fromRouter.getRouterInfo).subscribe(routerInfo => {
-      this.courseId = routerInfo.params['id'];
-    });
-  }
-
-  onChange(value: string) {
-    if (value.length > 2) {
-      console.log('value', value);
-      this.store.dispatch(new fromRouter.DirtyFormAction());
-    }
+    this.route.parent.params.subscribe(params => console.log('overview route params', params));
+    this.course = this.route.snapshot.data['course'];
+    console.log('course', this.course);
   }
 }
