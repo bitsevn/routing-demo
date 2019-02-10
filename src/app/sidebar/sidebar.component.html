@@ -1,1 +1,29 @@
-<router-outlet name="sidebarContent"> <p>Sidebar works!</p> </router-outlet>
+<router-outlet name="sidebarContent">
+  <div class="app-accordion-container">
+    <div class="app-accordion open">
+      <div class="app-accordion-header" (click)="open($event)">
+        <i class="fa fa-angle-down accordion-icon"></i>
+        <span class="accordion-title">Actions</span>
+      </div>
+      <div class="app-accordion-body">
+        <ul class="list-inline">
+          <li *ngFor="let item of items" class="list-item">item {{ item }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="app-accordion">
+      <div class="app-accordion-header" (click)="open($event)">
+        <i class="fa fa-angle-down accordion-icon"></i>
+        <span class="accordion-title">Settings</span>
+      </div>
+      <div class="app-accordion-body">Setting list</div>
+    </div>
+    <div class="app-accordion">
+      <div class="app-accordion-header" (click)="open($event)">
+        <i class="fa fa-angle-down accordion-icon"></i>
+        <span class="accordion-title">Preferences</span>
+      </div>
+      <div class="app-accordion-body">Preference list</div>
+    </div>
+  </div>
+</router-outlet>

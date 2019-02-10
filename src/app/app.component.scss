@@ -1,0 +1,30 @@
+.my-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-body {
+  flex-grow: 1;
+  padding: 0;
+  display: flex;
+}
+
+.my-body .my-body-container {
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.my-body .my-side-bar {
+  height: 100%;
+  width: 20%;
+  background: #252323;
+}
+
+.my-body .my-content {
+  height: 100%;
+  flex-grow: 1;
+}

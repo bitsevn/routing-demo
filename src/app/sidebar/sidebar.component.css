@@ -1,0 +1,61 @@
+.app-accordion-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #fff;
+}
+
+.app-accordion-container .app-accordion {
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 1px #1f1d1d;
+}
+
+.app-accordion-container .app-accordion.open {
+  flex-grow: 1;
+}
+
+.app-accordion-container .app-accordion .app-accordion-header {
+  background: #282d31;
+  padding: 0px 4px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.app-accordion-container .app-accordion .app-accordion-header .accordion-icon {
+  margin-right: 10px;
+}
+
+/* .app-accordion-container .app-accordion .app-accordion-header::before {
+  content: '\f107';
+  display: inline-block;
+  font: normal normal normal 16px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 10px;
+}
+
+.app-accordion-container .app-accordion.open .app-accordion-header::before {
+  content: '\f106';
+  display: inline-block;
+  font: normal normal normal 16px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 10px;
+} */
+
+.app-accordion-container .app-accordion .app-accordion-body {
+  flex-grow: 1;
+  display: none;
+  padding: 4px;
+  overflow: auto;
+}
+
+.app-accordion-container .app-accordion.open .app-accordion-body {
+  display: block;
+}
